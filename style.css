@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(70, 72, 98);
+    background: #0C0D11;
+    text-align: center;
+}
+
+svg:hover {
+    fill: #7EBAB5;
+}
+
+svg {
+    width: 2.2%;
+    margin-top: 1rem;
+    height: auto;
+    fill: rgb(70, 72, 98);
+}
+
+.container {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    min-width: 70vw;
+    max-width: 90vw;
+    gap: .5rem;
+}
+
+.box {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.box .got {
+    color: #EEEDED;
+}
+
+.box .lost {
+    color: #CD3A45;
+}
+
+#inputBox {
+    width: 0rem;
+    height: 0rem;
+    color: #0C0D11;
+    background: #0C0D11;
+    border: none;
+}
+
+.timer {
+    font-size: 1.3rem;
+    color: #7EBAB5;
+    cursor: pointer;
+    user-select: none;
+}
