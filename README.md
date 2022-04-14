@@ -1,4 +1,5 @@
 # NerdTyper
 Attractive &amp; beautiful project!
+A simple but useful project.
 
-A simple but attractive and useful project.
+Version 1.0.0
