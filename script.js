@@ -44,6 +44,7 @@ const timeLoop = () => {
             }
 
             alert(`Your typing speed was ${speed} WPM!`)
+            location.reload();
         }
     }, 1000);
 };
