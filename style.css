@@ -1,71 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Mono', monospace;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --text-color: rgb(94, 96, 127);
+--background-color: #1a1c1f;
+    --hover-fill-color: #7EBAB5;
+    --active-color: #7EBAB5;
+    --error-color: #CD3A45;
+    --default-color: #EEEDED;
+    --input-background: #1E1E1E;
+    --button-background: #7EBAB5;
+    --button-hover-background: #4DD0E1;
+    --border-color: #7EBAB5;
+    --focus-border-color: #4DD0E1;
+    --text-color-light: white;
 }
 
 body {
-    color: rgb(70, 72, 98);
-    background: #0C0D11;
     text-align: center;
-}
-
-svg:hover {
-    fill: #7EBAB5;
+    color: var(--text-color);
+    background: var(--background-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 svg {
     width: 2.2%;
-    margin-top: 1rem;
     height: auto;
-    fill: rgb(70, 72, 98);
+    fill: var(--text-color-light);
+    transition: fill 0.3s;
+}
+
+svg:hover {
+    fill: var(--hover-fill-color);
+    cursor: pointer;
 }
 
 .container {
     position: absolute;
-    top: 46%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 55vh;
     min-width: 70vw;
-    max-width: 90vw;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .box {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-family: 'Inconsolata', monospace;
     line-height: 2.5rem;
+    word-spacing: 0.1rem;
+    text-align: justify;
+    max-height: 35vh;
+    max-width: 75vw;
+    margin-bottom: 1rem;
+    overflow-y: auto;
 }
 
-.box .got {
-    color: #EEEDED;
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.box::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-.box .lost {
-    color: #CD3A45;
+.box::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
+
+.box::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox */
+.box {
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Thumb color and track color */
+}
+
+.box:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Thumb color on hover */
+}
+
 
 #inputBox {
-    width: 0rem;
-    height: 0rem;
-    color: #0C0D11;
-    background: #0C0D11;
+    width: 0;
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    color: var(--background-color);
+    background: var(--background-color);
     border: none;
 }
 
 .timer {
-    font-size: 1.3rem;
-    color: #7EBAB5;
+    font-size: 1.2rem;
+    color: var(--hover-fill-color);
     cursor: pointer;
     user-select: none;
+}
+
+h1 {
+    color: var(--text-color-light);
+    font-size: 2.5rem;
+}
+
+.defColor {
+    color: var(--hover-fill-color);
+    font-size: 1.2rem;
+}
+
+.nip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result {
+    margin-top: 1rem;
+    color: var(--hover-fill-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.textInput {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-background);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.textInput:focus {
+    outline: none;
+    border-color: var(--focus-border-color);
+}
+
+.text button, #importBtn, #outputBtn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-background);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 0.5rem;
+}
+
+.text button:hover, #importBtn:hover, #outputBtn:hover {
+    background-color: var(--button-hover-background);
+}
+
+.text button:focus, .box:focus {
+    outline: none;
+}
+
+.text h3 {
+    color: var(--text-color-light);
+    font-size: 1.3rem;
+}
+
+#liveWPM {
+    color: white;
+    font-size: 1rem;
+    position: sticky;
+}
+
+.got, .lost {
+    border-radius: 4px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.got {
+    color: white;
+}
+
+.lost {
+    color: red;
+}
+
+.first-letter {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+    animation: blink 1.5s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        text-decoration-color: transparent;
+    }
 }
