@@ -18,6 +18,17 @@ You can access **NerdTyper** directly through the website here:
 
 Simply visit the link and start testing your typing speed! ⏱️
 
+## Technologies Used 💻
+
+- **HTML5** for the structure.
+- **CSS** for the styling and layout.
+- **JavaScript** for the typing test functionality and dynamic interaction.
+
+
+## Contributing 🤝
+
+If you’d like to contribute to **NerdTyper**, feel free to fork the repository, make changes, and create a pull request. Whether it's bug fixes, improvements, or new features, your contributions are welcome!
+
 ## Installation (For Contributors) ⚙️
 
 To contribute to **NerdTyper**, follow these steps to clone the repository and get the project running locally:
@@ -34,30 +45,10 @@ To contribute to **NerdTyper**, follow these steps to clone the repository and g
 
 3. Open the `index.html` file in your web browser to test and contribute to the project.
 
-## Usage 🖥️
-
-1. Open the `index.html` file in your browser.
-2. Click on the input box and start typing the text that appears.
-3. Track your typing speed in real-time as you type.
-4. Click the timer to adjust the test duration or restart the test.
-
-## Technologies Used 💻
-
-- **HTML5** for the structure.
-- **CSS** for the styling and layout.
-- **JavaScript** for the typing test functionality and dynamic interaction.
-
-## Contributing 🤝
-
-If you’d like to contribute to **NerdTyper**, feel free to fork the repository, make changes, and create a pull request. Whether it's bug fixes, improvements, or new features, your contributions are welcome!
 
 ## License 📜
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Demo 🎬
-
-You can try the project live at: [NerdTyper - Typing Speed Checker](https://lamsal27.github.io/NerdTyper/)
 
 ## Author ✨
 
