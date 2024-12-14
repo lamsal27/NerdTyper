@@ -1,4 +1,4 @@
-# NerdTyper - Typing Speed Checker & Improver ![Version](https://img.shields.io/badge/version-1.0.1-blue)
+# NerdTyper - Typing Speed Checker & Improver ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 NerdTyper is a minimal yet effective typing speed checker and improver. It provides a simple, user-friendly interface to test and improve your typing skills. Whether you're a beginner or looking to improve your typing speed, NerdTyper makes it easy and fun! 🚀
 
